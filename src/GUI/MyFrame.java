@@ -27,9 +27,9 @@ public class MyFrame extends JFrame {
         add(button4);
         button5 = new JButton("Gjenero gare me probabilitet");
         add(button5);
-        button6 = new JButton("Button 6");
+        button6 = new JButton("Renditja e garave sipas datave");
         add(button6);
-        button7 = new JButton("Button 7");
+        button7 = new JButton("Kerko garat sipas shoferit");
         add(button7);
         button8 = new JButton("SAVE");
         add(button8);
