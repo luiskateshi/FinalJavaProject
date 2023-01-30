@@ -16,6 +16,7 @@ public class MyFrame extends JFrame {
     private JButton button7;
     private JButton button8;
     public MyFrame(ArrayList<Gara> races, ArrayList<Formula1Shofer> drivers) {
+        //emertimi i butonave
         setLayout(new GridLayout(3, 3));
         button1 = new JButton("Gjenero gare rastesore");
         add(button1);

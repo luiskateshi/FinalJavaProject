@@ -12,13 +12,16 @@ public class FrameButton1 {
 
     public FrameButton1(ArrayList<Gara> races) {
 
-        // kolonat e tabeles JTable
         DefaultTableModel model = new DefaultTableModel();
+
+        //kolonat e tabeles
         model.addColumn("Data");
         model.addColumn("Vendodhja");
         model.addColumn("Emri i shoferit");
         model.addColumn("Emri i skuadres");
         model.addColumn("Pozicioni");
+
+
 
         //popullimi i modelit me te dhena nga ArrayList
         for (Gara race : races) {

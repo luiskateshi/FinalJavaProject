@@ -6,12 +6,12 @@ import java.util.*;
 import static java.lang.System.in;
 
 public class Gara implements Serializable {
-    String data;
+    private String data;
 
-    String vendndodhja;
-    String emriShoferit;
-    String emriSkuadres;
-    int pozicioni;
+    private String vendndodhja;
+    private String emriShoferit;
+    private String emriSkuadres;
+    private int pozicioni;
 
     Gara() {}; //konstruktori default
     Gara(String data, String vendndodhja, String emriShoferit, String emriSkuadres, int pozicioni){
