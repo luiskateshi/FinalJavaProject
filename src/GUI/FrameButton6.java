@@ -3,13 +3,15 @@ import Main.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class FrameButton6 {
     public FrameButton6(ArrayList<Gara> races) {
 
 
-        String[] columnNames = {"Data","Vendodhja", "Emri shoferit", "Emri skuadres", "Pozicioni"};
+        String[] columnNames = {"Data", "Vendodhja", "Emri shoferit", "Emri skuadres", "Pozicioni"};
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
 
         for (Gara row : races) {
@@ -24,6 +26,17 @@ public class FrameButton6 {
         frame.setPreferredSize(new Dimension(450, 200));
         frame.pack();
         frame.setVisible(true);
-    }
 
+        JButton confirmButton = new JButton("Close");
+        frame.add(confirmButton, BorderLayout.SOUTH);
+    confirmButton.addActionListener(new ActionListener() {
+
+        public void actionPerformed(ActionEvent e) {
+
+            //mbyll frame
+            frame.dispose();
+
+        }
+    });
+    }
 }

@@ -1,11 +1,11 @@
-stivi	bosi	benc	2	1	0	10	9	 
+endri	simoni	Rover	0	1	2	0	7	 
+luis	kateshi	audi	1	1	0	1	7	 
+gent	lori	skuadra77	0	1	1	2	6	 
 herta	cota	fiat	2	2	0	4	10	 
-flor	bana	moto	0	0	4	8	9	 
 emiliano	tusha	porsche	0	1	1	6	6	 
+flor	bana	moto	0	0	4	8	9	 
+stivi	bosi	benc	2	1	0	10	9	 
 staisy	lom	skuadra66	1	0	0	12	6	 
 pod	ile	skuadra99	1	1	1	15	6	 
-gent	lori	skuadra77	0	1	1	2	6	 
 otto	dualy	skuadra33	0	1	1	18	6	 
-luis	kateshi	audi	1	1	0	1	7	 
 volkswagen	volkswagen	volkswagen	3	1	0	25	6	 
-endri	simoni	Rover	0	1	2	0	7	 
