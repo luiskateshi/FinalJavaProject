@@ -53,7 +53,7 @@ public class FrameButton5 {
                     i++;
                 }
                 //shfaq nje mesazh
-                JOptionPane.showMessageDialog(null, "GUI.Main.Gara e krijuar u shtua ne memorje. Shtypni save per te ruajtur ndryshimet ne file.");
+                JOptionPane.showMessageDialog(null, "Gara e krijuar u shtua ne memorje. Shtypni save per te ruajtur ndryshimet ne file.");
                 //mbyll frame
                 frame.dispose();
 

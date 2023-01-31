@@ -3,7 +3,6 @@ import GUI.MyFrame;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import static java.lang.Integer.parseInt;
 
 

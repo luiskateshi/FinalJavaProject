@@ -97,9 +97,31 @@ public class Gara implements Serializable {
 
     }
 
+
     public static int createRandomIntBetween(int start, int end) {
         return start + (int) Math.round(Math.random() * (end - start));
     }
+
+
+    public static String generateRandomCity()
+    {
+        String qyteti[] = {"Tirana", "Durrësi", "Shkodra", "Elbasani", "Vlora", "Korça", "Fieri", "Berati", "Pogradeci"};
+        Random rand = new Random();
+        String Vendodhja = qyteti[rand.nextInt(qyteti.length)];
+        return Vendodhja;
+    }
+
+    public static String generateRadnomDate()
+    {
+        Random rand = new Random();
+        int dita = rand.nextInt(30) + 1;
+        int muaji = rand.nextInt(12) + 1;
+        int viti = rand.nextInt(20) + 2000;
+        String data = dita + "/" + muaji + "/" + viti;
+        return data;
+    }
+
+
     public static ArrayList<Gara> generateRandomRace(ArrayList<Gara> races, ArrayList<Formula1Shofer> drivers) {
         ArrayList<Gara> tempGara = new ArrayList<Gara>();
         int nrPjesmarresve = drivers.size();
@@ -117,6 +139,7 @@ public class Gara implements Serializable {
         }
         return tempGara;
     }
+
     public static int[] generateRandomPositions(int nrPjesmarresve) {
         int positions[] = new int[nrPjesmarresve];
         for (int i = 0; i < nrPjesmarresve; i++) {
@@ -135,43 +158,9 @@ public class Gara implements Serializable {
         return positions;
     }
 
-    public static String generateRandomCity()
-    {
-        String qyteti[] = {"Tirana", "Durrësi", "Shkodra", "Elbasani", "Vlora", "Korça", "Fieri", "Berati", "Pogradeci"};
-        Random rand = new Random();
-        String Vendodhja = qyteti[rand.nextInt(qyteti.length)];
-        return Vendodhja;
-    }
-    public static String generateRadnomDate()
-    {
-        Random rand = new Random();
-        int dita = rand.nextInt(30) + 1;
-        int muaji = rand.nextInt(12) + 1;
-        int viti = rand.nextInt(20) + 2000;
-        String data = dita + "/" + muaji + "/" + viti;
-        return data;
-    }
 
+//_______________________________________________________________________________________________________________________
 
-    public static ArrayList<Gara> generateRandomRaceProbability (ArrayList<Gara> races, ArrayList<Formula1Shofer> drivers)
-    {
-        ArrayList<Gara> tempGara = new ArrayList<Gara>();
-        int nrPjesmarresve = drivers.size();
-        int nrGarave = races.size();
-        String data = generateRadnomDate();
-        String Vendodhja = generateRandomCity();
-        int StartPositions[] = generateRandomPositions(nrPjesmarresve);
-        System.out.println("StartPositions: " + Arrays.toString(StartPositions));
-        int FinishPositions[] = generateFinishPositionsWithProbability(fillProbabilityArray(), nrPjesmarresve);
-
-        int i = 0;
-        for (Formula1Shofer x : drivers) {
-            tempGara.add(new Gara(data.toString(), Vendodhja, x.getEmri(), x.getEmriSkuadres(), FinishPositions[StartPositions[i]-1]));
-            i++;
-        }
-
-        return tempGara;
-    }
     public static int[] fillProbabilityArray()
     {
         int probability[] = new int[100];
@@ -198,11 +187,32 @@ public class Gara implements Serializable {
             {
                 probability[i] = nr;
                 if(i%2!=0)
-                nr++;
+                    nr++;
             }
         }
         return probability;
     }
+
+    public static ArrayList<Gara> generateRandomRaceProbability (ArrayList<Gara> races, ArrayList<Formula1Shofer> drivers)
+    {
+        ArrayList<Gara> tempGara = new ArrayList<Gara>();
+        int nrPjesmarresve = drivers.size();
+        int nrGarave = races.size();
+        String data = generateRadnomDate();
+        String Vendodhja = generateRandomCity();
+        int StartPositions[] = generateRandomPositions(nrPjesmarresve);
+        System.out.println("StartPositions: " + Arrays.toString(StartPositions));
+        int FinishPositions[] = generateFinishPositionsWithProbability(fillProbabilityArray(), nrPjesmarresve);
+
+        int i = 0;
+        for (Formula1Shofer x : drivers) {
+            tempGara.add(new Gara(data.toString(), Vendodhja, x.getEmri(), x.getEmriSkuadres(), FinishPositions[StartPositions[i]-1]));
+            i++;
+        }
+
+        return tempGara;
+    }
+
     public static int[] generateFinishPositionsWithProbability(int[] probability, int nrPjesmarresve)
     {
         int positions[] = new int[nrPjesmarresve];

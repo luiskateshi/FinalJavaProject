@@ -42,6 +42,17 @@
 18/5/2014	Shkodra	luis	audi	10
 18/5/2014	Shkodra	volkswagen	volkswagen	1
 18/5/2014	Shkodra	endri	Rover	11
+26/4/2002	Vlora	stivi	benc	9
+26/4/2002	Vlora	herta	fiat	7
+26/4/2002	Vlora	flor	moto	1
+26/4/2002	Vlora	emiliano	porsche	6
+26/4/2002	Vlora	staisy	skuadra66	8
+26/4/2002	Vlora	pod	skuadra99	5
+26/4/2002	Vlora	gent	skuadra77	11
+26/4/2002	Vlora	otto	skuadra33	4
+26/4/2002	Vlora	luis	audi	3
+26/4/2002	Vlora	volkswagen	volkswagen	2
+26/4/2002	Vlora	endri	Rover	10
 22/10/2019	Pogradeci	stivi	benc	10
 22/10/2019	Pogradeci	herta	fiat	4
 22/10/2019	Pogradeci	flor	moto	11
