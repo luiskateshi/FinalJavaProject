@@ -3,6 +3,8 @@ import Main.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class FrameButton4 {
@@ -33,5 +35,17 @@ public class FrameButton4 {
         frame.setPreferredSize(new Dimension(800, 200));
         frame.pack();
         frame.setVisible(true);
+
+        JButton confirmButton = new JButton("Close");
+        frame.add(confirmButton, BorderLayout.SOUTH);
+        confirmButton.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+
+                //mbyll frame
+                frame.dispose();
+
+            }
+        });
     }
 }

@@ -137,7 +137,7 @@ public class MenaxhimKampionatiFormula1 implements MenaxhimKampionati {
 
     public void LoadDataShofer(){
 
-        //Leximi i File-it "garat.txt" dhe vendosja e informacionit ne objekt-vektorin ArrayList<GUI.Main.Gara> races
+        //Leximi i File-it "shoferet.txt" dhe vendosja e informacionit ne objekt-vektorin ArrayList<GUI.Main.Gara> races
         try {
             FileReader fr1 = new FileReader(file1);
             BufferedReader input = new BufferedReader(fr1);

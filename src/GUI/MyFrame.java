@@ -15,9 +15,11 @@ public class MyFrame extends JFrame {
     private JButton button6;
     private JButton button7;
     private JButton button8;
+    private JButton button9;
     public MyFrame(ArrayList<Gara> races, ArrayList<Formula1Shofer> drivers) {
         //emertimi i butonave
         setLayout(new GridLayout(3, 3));
+        getContentPane().setBackground(Color.green);
         button1 = new JButton("Gjenero gare rastesore");
         add(button1);
         button2 = new JButton("Shfaq Shoferet (DESC sipas pikeve)");
@@ -34,6 +36,8 @@ public class MyFrame extends JFrame {
         add(button7);
         button8 = new JButton("SAVE");
         add(button8);
+        button9 = new JButton("EXIT");
+        add(button9);
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 FrameButton1 var = new FrameButton1(Gara.generateRandomRace(races, drivers));
@@ -80,6 +84,11 @@ public class MyFrame extends JFrame {
                 MenaxhimKampionatiFormula1.SaveDataShofer();
                 //shfaq nje mesazh qe te dhenat u ruajten
                 JOptionPane.showMessageDialog(null, "Te dhenat u ruajten ne file.");
+            }
+        });
+        button9.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
 
